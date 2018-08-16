@@ -1,15 +1,22 @@
 import React, { Component } from 'react'
 import DataItem from './DataItem'
 
-const DataSet = (props) => {
 
+
+const DataSet = (props) => {
+const allIds=[];
     const dataList = props.results.map(project => (<DataItem
         Key={project.id}
-        url={project.url}
+        ProjName={project.name}
+        PicUrl={project.covers.original}
+        ProjUrl={project.url}
+      
         />
     ))
-    return dataList
 
+
+    return dataList
 }
+
 
 export default DataSet

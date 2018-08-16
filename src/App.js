@@ -15,7 +15,12 @@ class App extends Component {
       results: []
     };
     this.handleResultChange = this.handleResultChange.bind(this);
-}
+  }
+
+  handleResultChange (results) {
+    this.setState({results})
+
+  }
 
   render() {
     return (
